@@ -5,9 +5,11 @@ EXPOSE 8384 22000 21027/udp
 
 RUN adduser -D user
 
+# http://pool.sks-keyservers.net/pks/lookup?op=vindex&search=Syncthing+Release+Management&fingerprint=on
 # gpg: key 00654A3E: public key "Syncthing Release Management <release@syncthing.net>" imported
+
 ENV SYNCTHING_GPG_KEY 37C84554E7E0A261E4F76E1ED26E6ED000654A3E
-ENV SYNCTHING_VERSION v0.14.0-beta.1
+ENV SYNCTHING_VERSION v0.14.0-rc.1
 
 # Stuck behind a firewall?
 #ENV KEYSERVER hkp://hkps.pool.sks-keyservers.net:80
