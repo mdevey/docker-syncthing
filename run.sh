@@ -6,6 +6,7 @@ if [ "$HOME" = '/home/user' ]; then
 	exit 1
 fi
 
+mkdir -p "$HOME/Sync"
 mkdir -p "$HOME/.config/syncthing"
 
 set -x
@@ -13,10 +14,10 @@ docker run -d \
 	--name syncthing \
 	--restart always \
 	--user "$(id -u):$(id -g)" \
-	-v "$HOME:$HOME" \
+	-v "$HOME/Sync:$HOME/Sync" \
 	-v "$HOME/.config/syncthing:/home/user/.config/syncthing" \
-	-v /etc:/etc \
-	-v /mnt:/mnt \
-	--net host \
+	-p 8384:8384 \
+	-p 22000:2200 \
+	-p 21027:21027/udp \
 	mdevey/syncthing "$@"
 timeout 10s docker logs -f syncthing || true

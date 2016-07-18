@@ -1,5 +1,8 @@
 FROM alpine:3.3
 
+#https://docs.syncthing.net/users/firewall.html
+EXPOSE 8384 22000 21027/udp
+
 RUN adduser -D user
 
 # gpg: key 00654A3E: public key "Syncthing Release Management <release@syncthing.net>" imported
