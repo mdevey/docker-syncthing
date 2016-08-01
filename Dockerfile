@@ -5,6 +5,8 @@ EXPOSE 8384 22000 21027/udp
 
 RUN adduser -D user
 
+ENV STNOUPGRADE true
+
 # http://pool.sks-keyservers.net/pks/lookup?op=vindex&search=Syncthing+Release+Management&fingerprint=on
 # gpg: key 00654A3E: public key "Syncthing Release Management <release@syncthing.net>" imported
 ENV SYNCTHING_GPG_KEY 37C84554E7E0A261E4F76E1ED26E6ED000654A3E
