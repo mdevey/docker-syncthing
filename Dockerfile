@@ -35,4 +35,7 @@ RUN set -x \
   && apk del .temp-deps
 
 USER user
+#Something odd happening on rancherOS 0.5 with Docker 1.11.2 build b9f10c9
+#if docker run --user "$(id -u):$(id -g)" flag is set $HOME is set to "/" not "/home/user"
+ENV HOME /home/user
 CMD ["syncthing"]
