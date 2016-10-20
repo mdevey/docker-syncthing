@@ -12,7 +12,7 @@ ENV STNOUPGRADE true
 ENV SYNCTHING_GPG_KEY 37C84554E7E0A261E4F76E1ED26E6ED000654A3E
 
 # https://github.com/syncthing/syncthing/releases
-ENV SYNCTHING_VERSION v0.14.3
+ENV SYNCTHING_VERSION v0.14.9
 
 # Stuck behind a firewall?
 #ENV KEYSERVER hkp://hkps.pool.sks-keyservers.net:80
