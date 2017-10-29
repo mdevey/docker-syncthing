@@ -19,7 +19,7 @@ ENV SYNCTHING_VERSION v0.14.39
 ENV KEYSERVER ha.pool.sks-keyservers.net
 
 RUN set -x \
-  && apk --no-cache --virtual .temp-deps add gnupg ca-certificates \
+  && apk --no-cache --virtual .temp-deps add gnupg ca-certificates libressl \
   && tarball="syncthing-linux-amd64-${SYNCTHING_VERSION}.tar.gz" \
   && URL="https://github.com/syncthing/syncthing/releases/download/${SYNCTHING_VERSION}" \
   && wget "${URL}/${tarball}" "${URL}/sha1sum.txt.asc" \
