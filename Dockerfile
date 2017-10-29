@@ -15,8 +15,8 @@ ENV SYNCTHING_GPG_KEY 37C84554E7E0A261E4F76E1ED26E6ED000654A3E
 ENV SYNCTHING_VERSION v0.14.39
 
 # Stuck behind a firewall?
-#ENV KEYSERVER hkp://hkps.pool.sks-keyservers.net:80
-ENV KEYSERVER ha.pool.sks-keyservers.net
+ENV KEYSERVER hkp://hkps.pool.sks-keyservers.net:80
+#ENV KEYSERVER ha.pool.sks-keyservers.net
 
 RUN set -x \
   && apk --no-cache --virtual .temp-deps add gnupg ca-certificates libressl \
