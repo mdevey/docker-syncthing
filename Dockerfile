@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.6
 
 #https://docs.syncthing.net/users/firewall.html
 EXPOSE 8384 22000 21027/udp
@@ -12,7 +12,7 @@ ENV STNOUPGRADE true
 ENV SYNCTHING_GPG_KEY 37C84554E7E0A261E4F76E1ED26E6ED000654A3E
 
 # https://github.com/syncthing/syncthing/releases
-ENV SYNCTHING_VERSION v0.14.9
+ENV SYNCTHING_VERSION v0.14.39
 
 # Stuck behind a firewall?
 #ENV KEYSERVER hkp://hkps.pool.sks-keyservers.net:80
